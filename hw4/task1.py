@@ -51,21 +51,21 @@ if __name__ == "__main__":
 
     # Apply filter threshold
     filtered_user_pairs = user_pairs_rdd.filter(
-        lambda line: len(set(user_business[line[0]]) & set(user_business[line[1]])) >= filter_threshold)
+        lambda line: len(set(user_business[line[0]]) & set(user_business[line[1]])) >= int(filter_threshold))
     # print(filtered_user_pairs.count())
 
     # Generate vertices
     vertices = filtered_user_pairs.flatMap(lambda line: [(line[0],), (line[1],)]).distinct()
-    print("vertices count:", vertices.count())
+    # print("vertices count:", vertices.count())
     # Generate edges
-    edges = filtered_user_pairs.map(lambda line: (line[0], line[1]))
-    print("edges count:", edges.count())
+    edges = filtered_user_pairs.flatMap(lambda line: [line, (line[1], line[0])])
+    # print("edges count:", edges.count())
 
     # Convert to dataframes
     vertices_df = sqlContext.createDataFrame(vertices, ['id'])
     edges_df = sqlContext.createDataFrame(edges, ['src', 'dst'])
-    print((vertices_df.count(), len(vertices_df.columns)))
-    print((edges_df.count(), len(edges_df.columns)))
+    # print((vertices_df.count(), len(vertices_df.columns)))
+    # print((edges_df.count(), len(edges_df.columns)))
 
     # Create graph
     graph = GraphFrame(vertices_df, edges_df)
