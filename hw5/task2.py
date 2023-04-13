@@ -122,7 +122,7 @@ if __name__ == '__main__':
     # input_filename = "../resource/asnlib/publicdata/users.txt"
     # stream_size = int('100')
     # num_of_asks = int('30')
-    # output_filename = "../output/task2_result.txt"
+    # output_filename = "../output/task2_result.csv"
 
     # Store result for all asks
     flajolet_martine_result = list()
@@ -135,7 +135,7 @@ if __name__ == '__main__':
     bx = BlackBox()
     for _ in range(num_of_asks):
         stream_users = bx.ask(input_filename, stream_size)
-        # Apply bloom filter on user stream
+        # Apply Flajolet-Martin algorithm on user stream
         flajolet_martine_result.append(Flajolet_Martin(stream_users))
 
     # Print result
@@ -150,4 +150,4 @@ if __name__ == '__main__':
             f.write("{},{},{}\n".format(index, flajolet_martine_result[index][0], flajolet_martine_result[index][1]))
 
     # Run time
-    print("Duration: {}".format(time.time() - start_time))
+    # print("Duration: {}".format(time.time() - start_time))

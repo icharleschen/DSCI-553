@@ -58,7 +58,7 @@ def bloom_filter(user_stream):
             else:
                 user_tracker += 1
         if user not in previous_user:
-            if user_tracker == 10:  # Size of hash_values
+            if user_tracker == len(hash_values):  # Size of hash_values
                 fp += 1
             else:
                 tn += 1
@@ -68,6 +68,7 @@ def bloom_filter(user_stream):
 
     # Calculate false positive rate
     fpr = fp / (fp + tn)
+
     return fpr
 
 
@@ -83,7 +84,7 @@ if __name__ == '__main__':
     # input_filename = "../resource/asnlib/publicdata/users.txt"
     # stream_size = int('300')
     # num_of_asks = int('30')
-    # output_filename = "../output/task1_result.txt"
+    # output_filename = "../output/task1_result.csv"
 
     # Initialize global filter bit array
     filter_bit_array = [0 for i in range(69997)]
@@ -108,4 +109,4 @@ if __name__ == '__main__':
             f.write("{},{}\n".format(index, bloom_filter_result[index]))
 
     # Run time
-    print("Duration: {}".format(time.time() - start_time))
+    # print("Duration: {}".format(time.time() - start_time))
