@@ -4,13 +4,13 @@ import time
 import binascii
 
 from blackbox import BlackBox
-from pyspark import SparkContext
+# from pyspark import SparkContext
 
 # Spark configuration
-os.environ['PYSPARK_PYTHON'] = sys.executable
-os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
-sc = SparkContext('local[*]', 'task1')
-sc.setLogLevel("WARN")
+# os.environ['PYSPARK_PYTHON'] = sys.executable
+# os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
+# sc = SparkContext('local[*]', 'task1')
+# sc.setLogLevel("WARN")
 
 
 # Define hash functions
@@ -42,7 +42,6 @@ def myhashs(s):
 # Implement bloom filter and calculate false positive rate
 def bloom_filter(user_stream):
     # Initialize false positive and true negative trackers
-    previous_user = set()
     fp = 0
     tn = 0
 
@@ -82,7 +81,7 @@ if __name__ == '__main__':
 
     # Local testing filepaths
     # input_filename = "../resource/asnlib/publicdata/users.txt"
-    # stream_size = int('100')
+    # stream_size = int('300')
     # num_of_asks = int('30')
     # output_filename = "../output/task1_result.txt"
 
@@ -90,7 +89,10 @@ if __name__ == '__main__':
     filter_bit_array = [0 for i in range(69997)]
     # print(len(filter_bit_array))
 
+    # Initialize bloom filter result list
     bloom_filter_result = list()
+    # Initialize previous user list globally
+    previous_user = set()
 
     # Ask blackbox multiple times
     bx = BlackBox()
@@ -105,5 +107,5 @@ if __name__ == '__main__':
         for index in range(num_of_asks):
             f.write("{},{}\n".format(index, bloom_filter_result[index]))
 
-    # For local testing
+    # Run time
     print("Duration: {}".format(time.time() - start_time))
