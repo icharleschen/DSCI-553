@@ -17,14 +17,14 @@ Most of the assignments can only use standard python libraries and Spark RDD.
 
 
 
-|      | Topic                                                        | Programming                                                  | Tag                                                          |
+|      | Topic                                                        | Programming                                                  | Tags                                                         |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1    | [Spark Operation](https://github.com/icharleschen/DSCI-553/blob/main/hw1/Assignment1_-_Spring_2023.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw1) | `Spark` `Pyspark`                                            |
 | 2    | [Frequent Itemset](https://github.com/icharleschen/DSCI-553/blob/main/hw2/Assignment2_-_Spring_2023.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw2) | `SON` `A-Priori` `MultiHash` `PCY`                           |
-| 3    | [Recommendation System](https://github.com/icharleschen/DSCI-553/blob/main/hw3/Assignment_3_-_Spring_2023.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw3) | `LSH` `Jaccard similarity` `Pearson similarity` `Item-based CF` `Model-based recommendation system` `Hybrid recommendation system` |
+| 3    | [Recommendation System](https://github.com/icharleschen/DSCI-553/blob/main/hw3/Assignment_3_-_Spring_2023.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw3) | `LSH` `Jaccard similarity` `Pearson similarity` `Collaborative filtering` `Recommendation system` |
 | 4    | [Community Detection](https://github.com/icharleschen/DSCI-553/blob/main/hw4/DSCI553HW4.docx.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw4) | `Girvan-Newman Algorithm` `GraphFrames`                      |
-| 5    | [Data Stream](https://github.com/icharleschen/DSCI-553/blob/main/hw5/Assignment_5.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw5) | `Bloom Filter` `Flajolet-Martin Algorithm` `Fixed Size Sample` `Reservoir Sampling` |
-| 6    | [Clustering](https://github.com/icharleschen/DSCI-553/blob/main/hw6/HW6_description.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw6) | `Bradley-Fayyad-Reina (BFR) Algorithm` `K-Means`             |
+| 5    | [Data Stream](https://github.com/icharleschen/DSCI-553/blob/main/hw5/Assignment_5.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/hw5) | `Bloom Filter` `Flajolet-Martin Algorithm` `Reservoir sampling` |
+| 6    | [Clustering](https://github.com/icharleschen/DSCI-553/blob/main/hw6/HW6_description.pdf) | [Python](https://github.com/icharleschen/DSCI-553/blob/main/hw6/task.py) | `Bradley-Fayyad-Reina (BFR) Algorithm` `K-Means`             |
 
 
 
@@ -36,6 +36,6 @@ Can use any external Python libraries as long as they are available on Vocareum.
 
 
 
-| Topic                                                        | Programming                                                  | Tag                                                       | RMSE    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------- | ------- |
-| [Hybrid Recommendation System](https://github.com/icharleschen/DSCI-553/blob/main/competition/DSCI553%20Competition%20Spring%2020232.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/competition) | `XGBoost` `Yelp Data` `Model-based recommendation system` | 0.97964 |
+| Topic                                                        | Programming                                                  | Tags                                                      | RMSE     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------- | -------- |
+| [Hybrid Recommendation System](https://github.com/icharleschen/DSCI-553/blob/main/competition/DSCI553%20Competition%20Spring%2020232.pdf) | [Python](https://github.com/icharleschen/DSCI-553/blob/main/competition/competition.py) | `XGBoost` `Yelp Data` `Model-based recommendation system` | 0.979346 |

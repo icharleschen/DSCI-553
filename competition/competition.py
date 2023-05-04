@@ -257,7 +257,7 @@ if __name__ == "__main__":
                        'user_elite', 'user_average_stars', 'user_compliment_hot', 'user_compliment_profile',
                        'user_compliment_list', 'user_compliment_note', 'user_compliment_plain', 'user_compliment_cool',
                        'user_compliment_funny', 'user_compliment_writer', 'user_compliment_photos']
-    print(len(attribute_names))
+    # print(len(attribute_names))
 
     # Apply feature construction and format dataframe
     train_feature = feature_construction(train_df, business_data, user_data)
