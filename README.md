@@ -36,6 +36,6 @@ Can use any external Python libraries as long as they are available on Vocareum.
 
 
 
-|      | Topic                                                        | Programming                                                  | Tag                                                       |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------- |
-| 1    | [Hybrid Recommendation System](https://github.com/icharleschen/DSCI-553/blob/main/competition/DSCI553%20Competition%20Spring%2020232.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/competition) | `XGBoost` `Yelp Data` `Model-based recommendation system` |
+| Topic                                                        | Programming                                                  | Tag                                                       | RMSE    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------- | ------- |
+| [Hybrid Recommendation System](https://github.com/icharleschen/DSCI-553/blob/main/competition/DSCI553%20Competition%20Spring%2020232.pdf) | [Python](https://github.com/icharleschen/DSCI-553/tree/main/competition) | `XGBoost` `Yelp Data` `Model-based recommendation system` | 0.97964 |
